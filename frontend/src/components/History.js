@@ -7,7 +7,7 @@ export default function History() {
    const API_URL = "https://aifeedbackapp-19.onrender.com";
 
   useEffect(() => {
-    fetch("${API_URL}/api/history")
+    fetch(`${API_URL}/api/history`)
       .then(res => res.json())
       .then(data => setHistory(data));
   }, []);
