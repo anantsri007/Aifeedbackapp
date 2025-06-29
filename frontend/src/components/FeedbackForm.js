@@ -74,12 +74,15 @@ export default function FeedbackForm() {
   const [feedback, setFeedback] = useState("");
   const [loading, setLoading] = useState(false);
 
+
+  const API_URL = "https://aifeedbackapp-10.onrender.com";
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setFeedback("");
     try {
-      const res = await axios.post("/api/feedback", { user_input: input });
+      const res = await axios.post("${API_URL}/api/feedback", { user_input: input });
       setFeedback(res.data.feedback);
     } catch (err) {
       setFeedback("Error getting feedback.");
