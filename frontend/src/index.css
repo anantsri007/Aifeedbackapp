@@ -1,0 +1,8 @@
+
+
+body, html, #root {
+  height: 500%;
+  margin: 0;
+  background-color: #007bff1b; /* Bootstrap blue or choose your preferred blue */
+  color: black; /* Optional: text color for contrast */
+}
