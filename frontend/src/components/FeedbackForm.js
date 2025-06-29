@@ -82,7 +82,7 @@ export default function FeedbackForm() {
     setLoading(true);
     setFeedback("");
     try {
-      const res = await axios.post("${API_URL}/api/feedback", { user_input: input });
+      const res = await axios.post(`${API_URL}/api/feedback`, { user_input: input });
       setFeedback(res.data.feedback);
     } catch (err) {
       setFeedback("Error getting feedback.");
